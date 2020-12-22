@@ -1,0 +1,16 @@
+{
+  " nom " : " serveur projet " ,
+  " version " : " 1.0.0 " ,
+  " description " : "microblogage " ,
+  " main " : " server.js " ,
+  " scripts " : {
+    " test " : " echo \" Erreur: aucun test spécifié \ " && exit 1 " ,
+    " start " : " node server.js "
+  },
+  " auteur " : " " ,
+  " licence " : " ISC " ,
+  " dépendances " : {
+    " body-parser " : " ^ 1.14.1 " ,
+    " express " : " ^ 4.13.3 "
+  }
+}
