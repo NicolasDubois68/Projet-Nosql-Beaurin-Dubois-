@@ -1,6 +1,24 @@
 doctype html
 html
-  head
-    title= Nouveau message
   body
-    h1= Ecrire un nouveau message 
+    table(border='1', width='500')
+      tr(height='75')
+        td(colspan='2', align='center', valign='center')
+          font(size='5')
+            b
+              u Nouveau Message
+      |       
+      tr(height='40')
+        td(width='50')
+          | option1
+        |         
+        td(rowspan='3', align='left', valign='top')
+          | corps de texte
+      |       
+      tr(height='40')
+        td(width='50')
+          | option2
+      |       
+      tr(height='40')
+        td(width='50')
+          | option3
