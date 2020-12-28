@@ -20,24 +20,28 @@ var  BasedeDonnée  =  [
         "Amis" : "Jean" ,
         "Adresse mail" : ,
          "mot de passe " : , 
+         "messages" : ,
     } ,
     {
         "Nom d'utilisateur" : "Jean" ,
         "Amis" : "Florian", "Carine" ,
          "Adresse mail" : ,
          "mot de passe " : ,
+          "messages" : ,
     } ,
     {
         "Nom d'utilisateur" : "Florian" ,
         "Amis" : "Jean", "Arthur" ,
          "Adresse mail" : ,
          "mot de passe " : ,
+          "messages" : ,
     } ,
     {
         "Nom d'utilisateur" : "Arthur" ,
         "Amis" : "Florian" , 
          "Adresse mail" : ,
          "mot de passe " : ,
+          "messages" : ,
     }
 ] ;
 
