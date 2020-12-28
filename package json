@@ -1,13 +1,13 @@
 {
   " nom " : " serveur projet " ,
   " version " : " 1.0.0 " ,
-  " description " : "microblogage " ,
+  " description " : "Site de microblogage " ,
   " main " : " server.js " ,
   " scripts " : {
     " test " : " echo \" Erreur: aucun test spécifié \ " && exit 1 " ,
     " start " : " node server.js "
   },
-  " auteur " : " " ,
+  " auteur " : "Beaurin Anne " , "Dubois Nicolas"
   " licence " : " ISC " ,
   " dépendances " : {
     " body-parser " : " ^ 1.14.1 " ,
