@@ -16,20 +16,28 @@ app . use ( bodyParser . urlencoded ( { extended : false } ) ) ;
 
 var  BasedeDonnée  =  [
     {
-        "Prénom" : "Carine" ,
-        "Amis" : "Jean"
+        "Nom d'utilisateur" : "Carine" ,
+        "Amis" : "Jean" ,
+        "Adresse mail" : ,
+         "mot de passe " : , 
     } ,
     {
-        "Prénom" : "Jean" ,
-        "Amis" : "Florian", "Carine"
+        "Nom d'utilisateur" : "Jean" ,
+        "Amis" : "Florian", "Carine" ,
+         "Adresse mail" : ,
+         "mot de passe " : ,
     } ,
     {
-        "Prénom" : "Florian" ,
-        "Amis" : "Jean", "Arthur"
+        "Nom d'utilisateur" : "Florian" ,
+        "Amis" : "Jean", "Arthur" ,
+         "Adresse mail" : ,
+         "mot de passe " : ,
     } ,
     {
-        "Prénom" : "Arthur" ,
-        "Amis" : "Florian"
+        "Nom d'utilisateur" : "Arthur" ,
+        "Amis" : "Florian" , 
+         "Adresse mail" : ,
+         "mot de passe " : ,
     }
 ] ;
 
