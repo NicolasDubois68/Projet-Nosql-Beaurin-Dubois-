@@ -1,26 +1,5 @@
-doctype html
 html
   head
-    title Ecris new msg!
-    link(rel='stylesheet', type='text/css', href='styles/global.css')
+    title= Ecris un nouveau message
   body
-    h1 My favourite songs
-
-    form(action='new', method='post')
-      table#songs
-        thead
-          tr
-            th Artist
-            th Song Title
-            th
-        tbody
-          each song in songlist
-            tr
-              td= song.artist
-              td= song.name
-              td
-        tfoot
-          tr
-            td: input(type='text' name='artist')
-            td: input(type='text' name='name')
-            td: input(type='submit' text='Send')
+    h1= Poste un nouveau message
