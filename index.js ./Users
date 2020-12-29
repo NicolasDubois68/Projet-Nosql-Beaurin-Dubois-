@@ -19,7 +19,7 @@ var htmRoutes1 = require('./routes/pugUsers');
 var config = {
     dbUri: MONGO_URI,
     dbName: DB_NAME,
-    apiRoot: `http://localhost:${PORT}`
+    apiRoot: `http://localhost:${PORT1}`
 }
 
 // Static views
