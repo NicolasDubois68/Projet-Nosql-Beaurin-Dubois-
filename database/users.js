@@ -37,8 +37,15 @@ function addUsers(db) {
             mail: entry.mail || ''
             mdp: entry.mdp || ''
         };
+        
+ function addMsg(db) {
+    return (entry, callback) => {
+        if (!entry) entry = {};
+        var msg = {
+            message: entry.message || '',   
+        };
 
-        // Generating a unique string id (because ObjectIDs are overrated, amirite?)
+
         var salt = [String(new Date()), Users.name, Users.friends, Users.mail, Users.mdp].join('|');
         song._id = crypto.createHash('md5').update(salt).digest('hex');
         
@@ -75,7 +82,6 @@ module.exports = (config, callback) => {
     const client = new MongoClient(config.dbUri, { useUnifiedTopology: true});
  
     client.connect(err => {
-        // Handling mongo connect error and logging
         if (err) {
             console.error(chalk.red.bold('Error'), 'could not open Mongodb:', chalk.grey(err));
             process.exit(1);
