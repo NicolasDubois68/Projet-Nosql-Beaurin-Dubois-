@@ -12,7 +12,7 @@ function addHtmlRoutes(app, config, callback) {
         
         
         request.post(
-            `${config.apiRoot}/api/users`,
+            `${config.apiRoot}/apiUsers/users`,
             { json: req.body },
             (err, reqRes, body) => {
                 if (err) console.error(chalk.bold.red('Error'), err);
@@ -28,7 +28,7 @@ function addHtmlRoutes(app, config, callback) {
         console.log(chalk.blue.bold('Receive'), chalk.grey('call to'), chalk.yellow('/'));
         
        
-        request.get(`${config.apiRoot}/api/users`, { json: true }, (err, reqRes, body) => {
+        request.get(`${config.apiRoot}/apiUsers/users`, { json: true }, (err, reqRes, body) => {
             res.render('index', {
                 userslist: !err && body && Array.isArray(body.data) ? body.data : []
             });
