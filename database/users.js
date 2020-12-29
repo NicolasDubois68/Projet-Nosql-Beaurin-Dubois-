@@ -38,13 +38,6 @@ function addUsers(db) {
             mdp: entry.mdp || ''
         };
         
- function addMsg(db) {
-    return (entry, callback) => {
-        if (!entry) entry = {};
-        var msg = {
-            message: entry.message || '',   
-        };
-
 
         var salt = [String(new Date()), Users.name, Users.friends, Users.mail, Users.mdp].join('|');
         song._id = crypto.createHash('md5').update(salt).digest('hex');
