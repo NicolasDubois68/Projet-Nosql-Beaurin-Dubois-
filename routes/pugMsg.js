@@ -30,7 +30,7 @@ function addHtmlRoutes(app, config, callback) {
        
         request.get(`${config.apiRoot}/apiMsg/msg`, { json: true }, (err, reqRes, body) => {
             res.render('index', {
-                userslist: !err && body && Array.isArray(body.data) ? body.data : []
+                msglist: !err && body && Array.isArray(body.data) ? body.data : []
             });
         });
     });
