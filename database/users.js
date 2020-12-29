@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const crypto = require('crypto');
 
 const MongoClient = require('mongodb').MongoClient;
-const COLLECTION_NAME = 'utilisateurs';
+const COLLECTION_NAME = 'users';
 
 function printFailure(err) {
     console.error(chalk.red.bold('Error'), chalk.grey(err));
