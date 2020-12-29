@@ -1,11 +1,10 @@
   
 'use strict';
 
-const database = require('../database/songs');
+const database = require('../database/users');
 
 function addApiRoutes(app, config, callback) {
     database(config, users  => {
-        // This callback is called once the database has been readied
         
         app.get('/api/users', (req, res) => {
             users.find(results => {
