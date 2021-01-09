@@ -1,7 +1,7 @@
 'use strict';
 
 const PORT = 3080;
-const MONGO_URI = 'mongodb://localhost:27017';
+const MONGO_URI = 'mongodb://localhost:27018';
 const DB_NAME = 'users';
 
 const bodyParser = require('body-parser');
