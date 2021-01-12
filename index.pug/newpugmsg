@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Ajouter un message
+    link(rel='stylesheet', type='text/css', href='styles/global.css')    
+  body
+
+    h2 Nouveau message
+
+    if success
+      p Please fill all the forms to add a new message.
+    else
+      p Message successfully added
+    
+    p Click 
+      a(href='/') here
+      |  to return
