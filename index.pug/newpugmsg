@@ -8,9 +8,9 @@ html
     h2 Nouveau message
 
     if success
-      p Please fill all the forms to add a new message.
+      p Please fill all the forms to add a new msg.
     else
-      p Message successfully added
+      p msg successfully added
     
     p Click 
       a(href='/') here
