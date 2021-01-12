@@ -10,13 +10,15 @@ html
       table#message
         thead
           tr
+            th Nom
             th message
             th
         tbody
           each message in messagelist
             tr
+              td=msg.Nom
               td= msg.message
-              td
         tfoot
           tr
+            td: input(type='text' name='Nom')
             td: input(type='text' name='message')
