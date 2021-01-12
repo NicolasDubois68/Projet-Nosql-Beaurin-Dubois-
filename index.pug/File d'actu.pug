@@ -1,28 +1,25 @@
 doctype html
 html
   head
-    title Actu
-  |   
+    title File d'actualité
+    link(rel='stylesheet', type='text/css', href='styles/global.css')
   body
-    table(border='1', width='500', style='border-left-color: #ffffff; border-right-color: #ffffff; border-top-color: #ffffff; border-bottom-color: #ffffff')
-      tr(height='100')
-        td(align='center', valign='center', style='border-left-color: #ffffff; border-right-color: #ffffff; border-top-color: #ffffff; border-bottom-color: #ffffff')
-          font(size='5')
-            u Actu
-            |           
-            br
-            |           
-            font(size='3')
-              i Messages postés par les personnes suivies
-      |       
-      tr(height='50')
-        td(align='left', valign='top', style='border-left-color: #000000; border-right-color: #000000; border-top-color: #000000; border-bottom-color: #000000')
-          | Message 1
-      |       
-      tr(height='50')
-        td(align='left', valign='top', style='border-left-color: #000000; border-right-color: #000000; border-top-color: #000000; border-bottom-color: #000000')
-          | Message 2
-      |       
-      tr(height='50')
-        td(align='left', valign='top', style='border-left-color: #000000; border-right-color: #000000; border-top-color: #000000; border-bottom-color: #000000')
-          | Message 2
+    h1 Les messages de tous nos amis
+    form(action='new', method='post')
+      table#message
+        thead
+          tr
+            th Nom
+            th message
+            th
+        tbody
+          each song in songlist
+            tr
+              td= users.nom
+              td= msg.message
+              td
+        tfoot
+          tr
+            td: input(type='text' name='nom')
+            td: input(type='text' name='message')
+            td: input(type='submit' text='Send')
