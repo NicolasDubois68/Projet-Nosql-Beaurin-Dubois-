@@ -1,24 +1,26 @@
 doctype html
 html
   head
-    title Recherche
-  |   
+    title Recherche profile!
+    link(rel='stylesheet', type='text/css', href='styles/global.css')
   body
-    input(type='text', name='recherche', placeholder='Nom')
-    |     
-    br
-    |     
-    input(type='submit', value='Valider')
-    |     
-    br
-    br
-    |     
-    ul
-      li
-        a(href='http://www.e-partage.uha.fr/', style='font-size:12pt') Nom1
-      |       
-      li
-        a(href='http://www.e-partage.uha.fr/', style='font-size:12pt') Nom2
-      |       
-      li
-        a(href='http://www.e-partage.uha.fr/', style='font-size:12pt') Nom3
+    h1 profile
+
+    form(action='new', method='post')
+      table#profile
+        thead
+          tr
+            th Nom
+            th Message
+            th
+        tbody
+          each profile in profilelist
+            tr
+              td=profile.nom
+              td= profile.message
+              td
+        tfoot
+          tr
+            td: input(type='text' name='Nom')
+            td: input(type='text' name='message')
+            td: input(type='submit' text='Send')
