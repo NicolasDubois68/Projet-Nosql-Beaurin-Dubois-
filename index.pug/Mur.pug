@@ -1,28 +1,22 @@
 doctype html
 html
   head
-    title Page
-  |   
+    title Mur
+    link(rel='stylesheet', type='text/css', href='styles/global.css')
   body
-    table(border='1', width='500', style='border-left-color: #ffffff; border-right-color: #ffffff; border-top-color: #ffffff; border-bottom-color: #ffffff')
-      tr(height='100')
-        td(align='center', valign='center', style='border-left-color: #ffffff; border-right-color: #ffffff; border-top-color: #ffffff; border-bottom-color: #ffffff')
-          font(size='5')
-            u Nom de la personne
-            |           
-            br
-            |           
-            font(size='3')
-              i Messages que vous avez postés
-      |       
-      tr(height='50')
-        td(align='left', valign='top', style='border-left-color: #000000; border-right-color: #000000; border-top-color: #000000; border-bottom-color: #000000')
-          | Message 1
-      |       
-      tr(height='50')
-        td(align='left', valign='top', style='border-left-color: #000000; border-right-color: #000000; border-top-color: #000000; border-bottom-color: #000000')
-          | Message 2
-      |       
-      tr(height='50')
-        td(align='left', valign='top', style='border-left-color: #000000; border-right-color: #000000; border-top-color: #000000; border-bottom-color: #000000')
-          | Message 3
+    h1 Tous les messages d'un utilisateur
+
+    form(action='new', method='post')
+      table#message
+        thead
+          tr
+            th message
+            th
+        tbody
+          each message in messagelist
+            tr
+              td= msg.message
+              td
+        tfoot
+          tr
+            td: input(type='text' name='message')
