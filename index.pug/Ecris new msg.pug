@@ -1,27 +1,23 @@
 doctype html
 html
   head
-    title Nouveau Message
-  |   
+    title Nouveau message
+    link(rel='stylesheet', type='text/css', href='styles/global.css')
   body
-    table(border='1', width='500')
-      tr(height='75')
-        td(colspan='2', align='center', valign='center')
-          font(size='5')
-            b
-              u Nouveau Message
-      |       
-      tr(height='40')
-        td(width='50')
-          | option1
-        |         
-        td(rowspan='3', align='left', valign='top')
-          textarea(cols='59px', rows='8') Ecrivez ici votre message
-      |       
-      tr(height='40')
-        td(width='50')
-          | option2
-      |       
-      tr(height='40')
-        td(width='50')
-          input(type='submit', style='height:40px;', value='Valider')
+    h1 Ecrivez un nouveau message 
+
+    form(action='new', method='post')
+      table#message
+        thead
+          tr
+            th message
+            th
+        tbody
+          each message in messagelist
+            tr
+              td= message.message
+              td
+        tfoot
+          tr
+            td: input(type='text' name='message')
+            td: input(type='submit' text='Send')
