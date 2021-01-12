@@ -30,11 +30,14 @@ describe('database', () => {
     });
     
     it('should add entries to the list', done => {     
-        songs.count(oldCount => {
+        Users.count(oldCount => {
             var users= {
                 name: 'Michel',
+                amis : 'Michelle',
+                mail : 'michel.michel@gmail.com',
+                mdp : 'michel',
             }
-            Users.add(song, id => {
+            Users.add(users, id => {
                 expect(id).to.exist;
                 
                 Users.count(newCount => {
